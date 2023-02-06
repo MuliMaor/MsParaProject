@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_client_activity"
+    app:startDestination="@id/filterFragmentClient3">
+    <fragment
+        android:id="@+id/dateFragmantClient"
+        android:name="com.example.msparaproject.DateFragmantClient"
+        android:label="date_fragmant_client"
+        tools:layout="@layout/date_fragmant_client" >
+        <action
+            android:id="@+id/action_dateFragmantClient_to_filterFragmentClient3"
+            app:destination="@id/filterFragmentClient3" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragmentClient3"
+        android:name="com.example.msparaproject.FilterFragmentClient"
+        android:label="fragment_filter_client"
+        tools:layout="@layout/fragment_filter_client" >
+        <action
+            android:id="@+id/action_filterFragmentClient3_to_dateFragmantClient"
+            app:destination="@id/dateFragmantClient" />
+    </fragment>
+</navigation>
